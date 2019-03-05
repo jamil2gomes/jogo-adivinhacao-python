@@ -6,15 +6,27 @@ print("********************************")
 
 numero_secreto = random.randrange(1, 101)  # gera número aleatório entre 1 a 100
 
-total_de_tentativas = 10
+total_de_tentativas = 0
+pontos = 1000;
+
+
+print("Escolha um nível: (1) Fácil  (2) Médio  (3) Difícil")
+escolha = int(input("Escolha o nível: "))
+
+if (escolha == 1):
+    total_de_tentativas = 20;
+elif (escolha == 2):
+    total_de_tentativas = 10;
+else:
+    total_de_tentativas = 5
 
 for rodada in range(1, total_de_tentativas + 1):
     print(
         "Tentativa {:02d} de {:02d}".format(rodada, total_de_tentativas))  # string interpolation e formatação de string
 
-    chute_str = input("Digite o seu número: ")
-    print("Você digitou ", chute_str)
-    chute = int(chute_str)
+    chute = int(input("Digite o seu número: "))
+    print("Você digitou ", chute)
+
 
     if (chute < 1 or chute > 100):
         print("Valor inválido. Números devem estar entre 1 e 100!")
@@ -33,4 +45,7 @@ for rodada in range(1, total_de_tentativas + 1):
         elif (menor):
             print("O seu chute foi menor do que o número secreto!")
 
-print("Fim do jogo")
+        pontos -= abs(numero_secreto - chute) cd cd
+
+print("Fim do jogo!")
+print("Sua pontuação foi: {}".format(pontos))
