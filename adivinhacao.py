@@ -1,13 +1,16 @@
+import random
+
 print("********************************")
 print("Bem vindo ao jogo de adivinhação!")
 print("********************************")
 
-numero_secreto = 42
+numero_secreto = random.randrange(1, 101)  # gera número aleatório entre 1 a 100
 
-total_de_tentativas = 3
+total_de_tentativas = 10
 
 for rodada in range(1, total_de_tentativas + 1):
-    print("Tentativa {:02d} de {:02d}".format(rodada, total_de_tentativas))  # string interpolation e formatação de string
+    print(
+        "Tentativa {:02d} de {:02d}".format(rodada, total_de_tentativas))  # string interpolation e formatação de string
 
     chute_str = input("Digite o seu número: ")
     print("Você digitou ", chute_str)
