@@ -9,15 +9,15 @@ def jogar():
     numero_secreto = random.randrange(1, 101)  # gera número aleatório entre 1 a 100
 
     total_de_tentativas = 0
-    pontos = 1000;
+    pontos = 1000
 
     print("Escolha um nível: (1) Fácil  (2) Médio  (3) Difícil")
     escolha = int(input("Escolha o nível: "))
 
     if (escolha == 1):
-        total_de_tentativas = 20;
+        total_de_tentativas = 20
     elif (escolha == 2):
-        total_de_tentativas = 10;
+        total_de_tentativas = 10
     else:
         total_de_tentativas = 5
 
